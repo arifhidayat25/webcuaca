@@ -1,96 +1,44 @@
-SkyNow - Aplikasi Cuaca Animate & Real-time
-Your Weather, Alive on Screen.
+# 🌦️ SkyNow Weather App
 
-SkyNow adalah aplikasi cuaca berbasis web yang modern dan interaktif, dirancang untuk memberikan informasi cuaca secara real-time dengan antarmuka yang indah dan dinamis. Aplikasi ini dibangun menggunakan teknologi web modern seperti React, Vite, dan Tailwind CSS, serta terintegrasi dengan WeatherAPI.com untuk data cuaca yang akurat di seluruh dunia.
+Selamat datang di SkyNow, sebuah aplikasi cuaca modern yang dirancang dengan antarmuka dinamis dan data *real-time*. Proyek ini menampilkan informasi cuaca akurat dengan visualisasi yang menarik, termasuk latar belakang yang berubah sesuai kondisi cuaca dan animasi yang halus.
 
-[Gambar dari Antarmuka SkyNow]
-(Disarankan untuk menambahkan screenshot aplikasi di sini)
+---
 
-✨ Fitur Utama
-Cuaca Real-time: Dapatkan data cuaca terkini, termasuk suhu, kelembapan, kecepatan angin, serta suhu minimum dan maksimum untuk hari ini.
+## 🚀 Fitur Unggulan
 
-Prakiraan Cuaca Detail: Lihat prakiraan cuaca per jam untuk 24 jam ke depan dan prakiraan harian untuk 3 hari ke depan dalam bentuk grafik yang mudah dibaca.
+-   **Dashboard Cuaca**: Informasi lengkap cuaca saat ini (suhu, kondisi, kelembapan, angin).
+-   **Prakiraan Interaktif**: Grafik prakiraan per jam (24 jam) dan harian (3 hari).
+-   **Pencarian Global**: Temukan cuaca untuk kota mana pun di dunia dengan fitur *autocomplete* dari WeatherAPI.
+-   **Geolokasi**: Opsi untuk langsung mendeteksi dan menampilkan cuaca di lokasi Anda saat ini.
+-   **Kustomisasi**: Pengaturan untuk mengubah unit suhu (Celsius/Fahrenheit).
+-   **Antarmuka Adaptif**: Latar belakang dan ikon yang berubah secara dinamis mengikuti kondisi cuaca (siang, malam, hujan, cerah, dll.).
 
-Pencarian Lokasi Cerdas: Cari kota atau daerah mana pun di dunia dengan fitur autocomplete yang memberikan saran lokasi saat Anda mengetik.
+---
 
-Latar Belakang Dinamis: Latar belakang aplikasi berubah secara otomatis menyesuaikan kondisi cuaca saat ini (cerah, berawan, hujan, badai, atau malam hari) untuk pengalaman visual yang imersif.
+## 🛠️ Teknologi yang Digunakan
 
-Personalisasi: Sesuaikan unit suhu antara Celsius (°C) dan Fahrenheit (°F) sesuai preferensi Anda.
+-   **Frontend**: React (dengan Vite)
+-   **Manajemen State**: Zustand
+-   **Styling**: Tailwind CSS
+-   **Komponen UI**: shadcn/ui
+-   **Animasi**: Framer Motion
+-   **Grafik**: Recharts
+-   **Data**: WeatherAPI.com
 
-Riwayat Pencarian: Akses cepat lokasi yang terakhir kali Anda cari.
+---
 
-🛠️ Tumpukan Teknologi (Tech Stack)
-Proyek ini dibangun menggunakan serangkaian teknologi modern untuk memastikan performa yang cepat, skalabilitas, dan kemudahan pengembangan.
+## ⚙️ Panduan Menjalankan Proyek
 
-Framework: React & Vite
+### 1. Prasyarat
+-   Node.js (v18+)
+-   NPM / Yarn / PNPM
 
-Manajemen State: Zustand
+### 2. Instalasi
+Clone repositori ini dan instal semua dependensi yang dibutuhkan.
+```bash
+# Clone repositori (jika belum)
+git clone <URL_REPOSITORI_ANDA>
+cd <NAMA_FOLDER_PROYEK>
 
-Styling: Tailwind CSS
-
-Komponen UI: shadcn/ui & Radix UI
-
-Animasi: Framer Motion
-
-Grafik: Recharts
-
-Ikon: Lucide React
-
-Sumber Data: WeatherAPI.com
-
-🚀 Instalasi dan Menjalankan Proyek
-Ikuti langkah-langkah berikut untuk menjalankan proyek ini di lingkungan lokal Anda.
-
-Prasyarat
-Node.js (versi 18.x atau lebih tinggi)
-
-npm atau yarn
-
-Langkah-langkah
-Clone Repositori (Jika sudah ada, lewati langkah ini)
-
-git clone [https://github.com/username/skynow-app.git](https://github.com/username/skynow-app.git)
-cd skynow-app
-
-Instalasi Dependensi
-Buka terminal di direktori proyek dan jalankan perintah:
-
+# Instal dependensi
 npm install
-
-Konfigurasi API Key (Langkah Penting!)
-Aplikasi ini memerlukan API key dari WeatherAPI.com untuk berfungsi.
-
-Daftar untuk mendapatkan API key gratis di WeatherAPI.com.
-
-Buka file src/store/weatherStore.ts.
-
-Cari baris berikut dan ganti 'MASUKKAN_API_KEY_ANDA_DI_SINI' dengan API key Anda.
-
-const API_KEY = 'MASUKKAN_API_KEY_ANDA_DI_SINI';
-
-Lakukan hal yang sama pada file src/components/SearchScreen.tsx.
-
-Jalankan Server Pengembangan
-Setelah instalasi dan konfigurasi selesai, jalankan server dengan perintah:
-
-npm run dev
-
-Aplikasi akan tersedia di http://localhost:3000 (atau port lain jika 3000 sudah digunakan).
-
-📂 Struktur Proyek
-Struktur folder proyek ini dirancang agar mudah dipahami dan dikelola.
-
-/
-├── src/
-│   ├── components/       # Komponen React
-│   │   ├── ui/           # Komponen UI dasar (Button, Card, dll.)
-│   │   ├── App.tsx       # Komponen utama & router
-│   │   ├── HomeScreen.tsx
-│   │   └── ...           # Komponen layar lainnya
-│   ├── store/
-│   │   └── weatherStore.ts # Logic & state management (Zustand)
-│   └── ...               # File utama lainnya (main.tsx, styles)
-└── package.json          # Konfigurasi & dependensi proyek
-
-📄 Lisensi
-Proyek ini dilisensikan di bawah Lisensi MIT. Lihat file LICENSE untuk detail lebih lanjut.
