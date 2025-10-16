@@ -7,6 +7,7 @@ import { SearchScreen } from './components/SearchScreen';
 import { SettingsScreen } from './components/SettingsScreen';
 import { BottomNavigation } from './components/BottomNavigation';
 import { Toaster } from './components/ui/sonner';
+import PwaReloadPrompt from './components/PwaReloadPrompt'; // Impor komponen PWA
 
 export default function App() {
   const [showSplash, setShowSplash] = useState(true);
@@ -51,6 +52,7 @@ export default function App() {
         )}
       </AnimatePresence>
       <Toaster />
+      <PwaReloadPrompt /> {/* Tambahkan komponen PWA di sini */}
     </div>
   );
 }
