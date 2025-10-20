@@ -8,16 +8,16 @@ export default defineConfig({
     react(),
     // Tambahkan plugin VitePWA untuk fungsionalitas PWA
     VitePWA({
-      registerType: 'autoUpdate', // Service worker akan update otomatis
+      registerType: 'autoUpdate',
       workbox: {
-        globPatterns: ['**/*.{js,css,html,ico,png,svg}'] // Cache semua aset penting
+        globPatterns: ['**/*.{js,css,html,ico,png,svg}']
       },
       includeAssets: ['favicon.ico', 'apple-touch-icon.png'],
       manifest: {
         name: 'SkyNow Weather',
         short_name: 'SkyNow',
         description: 'Aplikasi cuaca real-time dengan antarmuka yang dinamis.',
-        theme_color: '#3b82f6', // Warna biru dari tema aplikasi
+        theme_color: '#3b82f6',
         background_color: '#ffffff',
         display: 'standalone',
         scope: '/',
@@ -27,34 +27,35 @@ export default defineConfig({
             src: 'icons/icon-192x192.png',
             sizes: '192x192',
             type: 'image/png',
+            purpose: 'any'
           },
           {
             src: 'icons/icon-512x512.png',
             sizes: '512x512',
             type: 'image/png',
+            purpose: 'any'
           },
           {
-            src: 'icons/icon-512x512.png',
+            src: 'icons/maskable-icon-512x512.png',
             sizes: '512x512',
             type: 'image/png',
-            purpose: 'any maskable',
-          },
+            purpose: 'maskable'
+          }
         ],
-        // Menambahkan screenshot untuk pengalaman instalasi yang lebih baik
         screenshots: [
           {
-            "src": "screenshots/screenshot1.png",
-            "sizes": "1080x1920",
-            "type": "image/png",
-            "form_factor": "narrow",
-            "label": "Tampilan Utama Aplikasi"
+            src: "screenshots/mobile-screenshot1.png",
+            sizes: "1080x1920",
+            type: "image/png",
+            form_factor: "narrow",
+            label: "Tampilan Utama di Mobile"
           },
           {
-            "src": "screenshots/screenshot2.png",
-            "sizes": "1080x1920",
-            "type": "image/png",
-            "form_factor": "narrow",
-            "label": "Prakiraan Cuaca Mingguan"
+            src: "screenshots/desktop-screenshot1.png",
+            sizes: "1920x1080",
+            type: "image/png",
+            form_factor: "wide",
+            label: "Tampilan Utama di Desktop"
           }
         ]
       },
