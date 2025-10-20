@@ -40,6 +40,23 @@ export default defineConfig({
             purpose: 'any maskable',
           },
         ],
+        // Menambahkan screenshot untuk pengalaman instalasi yang lebih baik
+        screenshots: [
+          {
+            "src": "screenshots/screenshot1.png",
+            "sizes": "1080x1920",
+            "type": "image/png",
+            "form_factor": "narrow",
+            "label": "Tampilan Utama Aplikasi"
+          },
+          {
+            "src": "screenshots/screenshot2.png",
+            "sizes": "1080x1920",
+            "type": "image/png",
+            "form_factor": "narrow",
+            "label": "Prakiraan Cuaca Mingguan"
+          }
+        ]
       },
     }),
   ],
